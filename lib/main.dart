@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,21 +17,21 @@ class MyApp extends StatelessWidget {
       title: 'badi',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: kBackground),
-        
-      elevatedButtonTheme: ElevatedButtonThemeData(
-         style: ElevatedButton.styleFrom(
-          elevation: 0 ,
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            elevation: 0,
             foregroundColor: Colors.white, // Text color
             backgroundColor: kPrimary, // Button background
             // minimumSize: const Size(double.infinity, 30),
-             // Full width, fixed height
+            // Full width, fixed height
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25.0),
               side: BorderSide(
-              color: kPrimary,
-              strokeAlign: BorderSide.strokeAlignInside,
-              style: BorderStyle.none,)
-                
+                color: kPrimary,
+                strokeAlign: BorderSide.strokeAlignInside,
+                style: BorderStyle.none,
+              ),
             ),
             textStyle: const TextStyle(
               fontSize: 20,
@@ -39,8 +40,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: OnboardingScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }
-

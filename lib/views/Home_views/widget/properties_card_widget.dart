@@ -1,4 +1,3 @@
-
 import 'package:badi/model/property_listing_model.dart';
 import 'package:badi/views/Home_views/properties_details_screen.dart';
 import 'package:flutter/material.dart';

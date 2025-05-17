@@ -7,10 +7,11 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
-//  bool agreeTerms = false;
+  //  bool agreeTerms = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kBackground,
       body: Padding(
         padding: const EdgeInsets.all(6.0),
@@ -31,23 +32,23 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 15),
 
                 Padding(
-          padding: const EdgeInsets.all(20),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               // Outputs a horizontal Divider with the text placed in the center.
-              //   TextDivider.horizontal(text: const Text('Horizontal Test')),
-              // Outputs a vertical Divider with the text placed in the center.
-              //   TextDivider.vertical(text: const Text('Vertical Test')),
-              ]
-            ),
-          ),
-        ),
+                  padding: const EdgeInsets.all(20),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Outputs a horizontal Divider with the text placed in the center.
+                        //   TextDivider.horizontal(text: const Text('Horizontal Test')),
+                        // Outputs a vertical Divider with the text placed in the center.
+                        //   TextDivider.vertical(text: const Text('Vertical Test')),
+                      ],
+                    ),
+                  ),
+                ),
 
                 SizedBox(height: 15),
 
-                SocialLoginFormWidget()
+                SocialLoginFormWidget(),
               ],
             ),
           ),

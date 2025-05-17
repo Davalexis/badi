@@ -7,7 +7,11 @@ class BottomnavigationWidget extends StatelessWidget {
 
   final int selectedIndex;
   final Function(int) whentapped; 
-  const BottomnavigationWidget({super.key, required this.selectedIndex, required this.whentapped});
+  const BottomnavigationWidget({
+    super.key, 
+    required this.selectedIndex, 
+    required this.whentapped
+    });
 //UI REPRESENTATION OF EACH BUTTON
   @override
   Widget build(BuildContext context) {

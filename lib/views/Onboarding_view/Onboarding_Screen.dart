@@ -1,6 +1,4 @@
-
 import 'package:badi/views/Onboarding_view/button_widget.dart';
-import 'package:badi/views/Onboarding_view/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -38,7 +36,8 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
 
-            TextWidget(),
+            //TextWidget(),
+
 
           ButtonWidget(),
 

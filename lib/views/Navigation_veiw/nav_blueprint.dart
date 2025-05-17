@@ -21,6 +21,7 @@ class NavBluePrint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final Color color = isSelected ? kPrimary :  Colors.black87;
     final IconData icon = isSelected ? selectedIcon : unselectedIcon;
     return  InkWell(

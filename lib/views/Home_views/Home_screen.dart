@@ -16,9 +16,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            HomeScreenHearder(),
-
-            
+            HomeScreenHearder(),            
             Expanded(child: PropertiesGridviewWidget(property: properties)),
             // ignore: avoid_print
             // pri nt("Number of properties : ${property.length}");
