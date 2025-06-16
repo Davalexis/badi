@@ -1,4 +1,4 @@
-import 'package:badi/model/property_listing_model.dart';
+import 'package:badi/shared/model/property_listing_model.dart';
 
 List<PropertyListingModel> properties = [
   //1

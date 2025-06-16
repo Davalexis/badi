@@ -1,8 +1,8 @@
-import 'package:badi/constants/Colors.dart';
+import 'package:badi/Core/constants/Colors.dart';
 import 'package:flutter/material.dart';
 
-class WhitelistedScreen extends StatelessWidget {
-  const WhitelistedScreen({super.key});
+class SearchScreen extends StatelessWidget {
+  const  SearchScreen ({super.key});
 
   @override
   Widget build(BuildContext context) {

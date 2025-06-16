@@ -1,4 +1,4 @@
-import 'package:badi/constants/Colors.dart';
+import 'package:badi/Core/constants/Colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {

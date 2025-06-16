@@ -1,4 +1,4 @@
-import 'package:badi/constants/Colors.dart';
+import 'package:badi/Core/constants/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
@@ -24,7 +24,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Text(
               "badi",
               style: TextStyle(
-                fontFamily: '',
+        
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: kPrimary,

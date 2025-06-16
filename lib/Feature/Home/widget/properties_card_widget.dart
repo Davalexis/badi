@@ -1,8 +1,8 @@
-import 'package:badi/model/property_listing_model.dart';
-import 'package:badi/views/Home_views/properties_details_screen.dart';
+import 'package:badi/shared/model/property_listing_model.dart';
+import 'package:badi/Feature/Home/properties_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-import 'package:badi/constants/Colors.dart';
+import 'package:badi/Core/constants/Colors.dart';
 
 class PropertiesCardWidget extends StatefulWidget {
   final PropertyListingModel propertyListingModel;

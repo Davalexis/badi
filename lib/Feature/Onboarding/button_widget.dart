@@ -1,4 +1,4 @@
-import 'package:badi/views/Auth_views/login_screen.dart';
+import 'package:badi/Feature/Auth/screen/Login_screen.dart';
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {

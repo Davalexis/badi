@@ -1,5 +1,5 @@
-import 'package:badi/constants/Colors.dart';
-import 'package:badi/views/Onboarding_view/Onboarding_Screen.dart';
+import 'package:badi/Core/constants/Colors.dart';
+import 'package:badi/Feature/Onboarding/Onboarding_Screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

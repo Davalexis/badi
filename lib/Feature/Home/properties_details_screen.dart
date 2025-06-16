@@ -1,7 +1,7 @@
-import 'package:badi/constants/Colors.dart';
-import 'package:badi/views/Home_views/widget/detail_screen_header_widget.dart';
+import 'package:badi/Core/constants/Colors.dart';
+import 'package:badi/Feature/Home/widget/detail_screen_header_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:badi/model/property_listing_model.dart';
+import 'package:badi/shared/model/property_listing_model.dart';
 
 class PropertiesDetailsScren extends StatefulWidget {
   final PropertyListingModel propertyListingModel;
@@ -59,7 +59,10 @@ class _PropertiesDetailsScrenState extends State<PropertiesDetailsScren> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20 ,vertical: 20,),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 20,
+                          ),
                           child: Column(
                             children: [
                               Row(
@@ -79,7 +82,7 @@ class _PropertiesDetailsScrenState extends State<PropertiesDetailsScren> {
                               SizedBox(height: 10),
 
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 50 ,),
+                                padding: EdgeInsets.symmetric(horizontal: 50),
                                 child: Text(widget.propertyListingModel.price),
                               ),
                             ],

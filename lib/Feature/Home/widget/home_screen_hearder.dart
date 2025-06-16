@@ -1,4 +1,4 @@
-import 'package:badi/views/Home_views/widget/Filter_bottom_modal.dart';
+import 'package:badi/Feature/Home/widget/Filter_bottom_modal.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 

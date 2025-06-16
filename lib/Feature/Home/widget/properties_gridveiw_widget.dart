@@ -1,5 +1,5 @@
-import 'package:badi/model/property_listing_model.dart';
-import 'package:badi/views/Home_views/widget/properties_card_widget.dart';
+import 'package:badi/shared/model/property_listing_model.dart';
+import 'package:badi/Feature/Home/widget/properties_card_widget.dart';
 import 'package:flutter/material.dart';
 
 class PropertiesGridviewWidget extends StatefulWidget {
