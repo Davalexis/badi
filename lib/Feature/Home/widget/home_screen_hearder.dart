@@ -1,9 +1,10 @@
-import 'package:badi/Feature/Home/widget/Filter_bottom_modal.dart';
+import 'package:badi/Feature/Filter/screen/Filter_bottom_modal.dart';
+import 'package:badi/Feature/Posts/screen/creating_post.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
-class HomeScreenHearder extends StatelessWidget {
-  const HomeScreenHearder({super.key});
+class HomeScreenHeader extends StatelessWidget {
+  const HomeScreenHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,10 @@ class HomeScreenHearder extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.white,
             radius: 30,
-            child: Icon(IconsaxPlusLinear.notification),
+            child: IconButton(
+              icon: Icon(IconsaxPlusLinear.messages_3),
+              onPressed: () {},
+            ),
           ),
 
           GestureDetector(
@@ -45,8 +49,6 @@ class HomeScreenHearder extends StatelessWidget {
                     ),
                   ),
 
-                  
-
                   Text(
                     "4-5 Feb,2025.2 guests",
                     style: TextStyle(
@@ -63,13 +65,18 @@ class HomeScreenHearder extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.white,
             radius: 30,
-            child: Icon(IconsaxPlusLinear.messages_2),
+            child: IconButton(
+              icon: Icon(IconsaxPlusLinear.add),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CreatingPostScreen()),
+                );
+              },
+            ),
           ),
         ],
       ),
     );
   }
 }
-
-//BOTTOM MODAL SHEET POP UP UI
-

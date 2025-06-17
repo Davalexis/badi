@@ -1,5 +1,6 @@
-import 'package:badi/Feature/Onboarding/button_widget.dart';
-import 'package:badi/Feature/Onboarding/text_widget.dart';
+import 'package:badi/Feature/Auth/screen/login_screen.dart';
+import 'package:badi/shared/widget/button_widget.dart';
+import 'package:badi/Feature/Onboarding/widget/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -33,8 +34,26 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
           ),
-          TextWidget(),
-          ButtonWidget(),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Spacer(),
+                Center(child: TextWidget()),
+                SizedBox(height: 50),
+                ButtonWidget(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
+                  },
+                  buttonText: 'GET STARTED',
+                ),
+                SizedBox(height: 20),
+              ],
+            ),
+          ),
         ],
       ),
     );

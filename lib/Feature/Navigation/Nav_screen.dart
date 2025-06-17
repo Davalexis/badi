@@ -1,8 +1,8 @@
-import 'package:badi/Feature/Home/Home_screen.dart';
+import 'package:badi/Feature/Home/screen/Home_screen.dart';
 import 'package:badi/Feature/Navigation/bottomNavigation_widget.dart';
-import 'package:badi/Feature/Profile/profile_screen.dart';
-import 'package:badi/Feature/Search/search_screen.dart';
-import 'package:badi/Feature/Whitelisted/whitelisted_screen.dart';
+import 'package:badi/Feature/Profile/screen/profile_screen.dart';
+import 'package:badi/Feature/Search/screen/search_screen.dart';
+import 'package:badi/Feature/Whitelisted/screen/whitelisted_screen.dart';
 import 'package:flutter/material.dart';
 
 // SCREEN OF THE NAVIGATION BAR THE HOLD ALL THE SCREENS

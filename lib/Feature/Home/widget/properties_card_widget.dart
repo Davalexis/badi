@@ -1,7 +1,6 @@
 import 'package:badi/shared/model/property_listing_model.dart';
-import 'package:badi/Feature/Home/properties_details_screen.dart';
+import 'package:badi/Feature/Home/screen/properties_details_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:badi/Core/constants/Colors.dart';
 
 class PropertiesCardWidget extends StatefulWidget {
@@ -24,7 +23,15 @@ class _PropertiesCardWidgetState extends State<PropertiesCardWidget> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => PropertiesDetailsScren(propertyListingModel: widget.propertyListingModel))); 
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder:
+                (context) => PropertiesDetailsScreen(
+                  propertyListingModel: widget.propertyListingModel,
+                ),
+          ),
+        );
       },
       child: Card.outlined(
         color: kText,
@@ -48,25 +55,8 @@ class _PropertiesCardWidgetState extends State<PropertiesCardWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: CircleAvatar(
-                backgroundColor: kText,
-                radius: 23,
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isWhitelisted = !isWhitelisted;
-                    });
-                  },
-                  icon: Icon(
-                    isWhitelisted
-                        ? IconsaxPlusBold.archive_minus
-                        : IconsaxPlusLinear.archive_minus,
-                    color: isWhitelisted ? kPrimary : Colors.black,
-                  ),
-                ),
-              ),
             ),
-      
+
             Padding(
               padding: EdgeInsets.all(8),
               child: Column(
@@ -84,7 +74,7 @@ class _PropertiesCardWidgetState extends State<PropertiesCardWidget> {
                       ),
                     ),
                   ),
-      
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
