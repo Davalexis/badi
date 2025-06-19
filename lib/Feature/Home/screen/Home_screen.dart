@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             HomeScreenHeader(),            
             Expanded(child: PropertiesGridviewWidget(property: properties)),
             // ignore: avoid_print
-            // print("Number of properties : ${property.length}");
+            // pri nt("Number of properties : ${property.length}");
           ],
         ),
       ),

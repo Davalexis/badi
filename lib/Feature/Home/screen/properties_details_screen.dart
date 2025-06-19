@@ -1,5 +1,4 @@
 import 'package:badi/Core/constants/Colors.dart';
-import 'package:badi/Feature/Home/widget/detail_screen_header_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:badi/shared/model/property_listing_model.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
@@ -18,6 +17,8 @@ class PropertiesDetailsScreen extends StatefulWidget {
 }
 
 class _PropertiesDetailsScreenState extends State<PropertiesDetailsScreen> {
+  bool isWhitelisted = false;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,13 +27,67 @@ class _PropertiesDetailsScreenState extends State<PropertiesDetailsScreen> {
         body: Column(
           children: [
             // Your existing header widget
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 10.0,
+          Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        CircleAvatar(
+          backgroundColor: Colors.white,
+          radius: 30,
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(IconsaxPlusLinear.arrow_left_1),
+          ),
+        ),
+
+        Container(
+          height: 70,
+          width: 250,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30),
+          ),
+
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 4,
+            children: [
+              Text(
+                'Details',
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-              child: DetailScreenHeaderWidget(),
+            ],
+          ),
+        ),
+
+        Container(
+          child: CircleAvatar(
+            backgroundColor: kText,
+            radius: 30,
+            child: IconButton(
+             splashRadius:30 ,
+             iconSize: 28,
+              onPressed: () {
+                setState(() {
+                  isWhitelisted = !isWhitelisted;
+                });
+              },
+              icon: Icon(
+                isWhitelisted
+                    ? IconsaxPlusBold.archive_minus
+                    : IconsaxPlusLinear.archive_minus,
+                color: isWhitelisted ? kPrimary : Colors.black,
+              ),
             ),
+          ),
+        ),
+      ],
+    ),
 
             Expanded(
               child: SingleChildScrollView(
