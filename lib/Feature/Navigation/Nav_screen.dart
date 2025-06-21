@@ -17,7 +17,7 @@ class _NavScreenState extends State<NavScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screen = [
-    HomeScreen(property: []),
+    HomeScreen(),
     SearchScreen(),
     WhitelistedScreen(),
     ProfileScreen(),

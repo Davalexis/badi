@@ -41,22 +41,13 @@ class BottomnavigationWidget extends StatelessWidget {
             unselectedIcon: IconsaxPlusLinear.search_normal,
           ),
 
-          // NavBluePrint(
-          //   label: 'Add',
-          //   onTap: () {
-          //     whentapped(2);
-          //   },
-          //   isSelected: selectedIndex == 2,
-          //   selectedIcon: IconsaxPlusBold.add,
-          //   unselectedIcon: IconsaxPlusLinear.add,
-          // ),
-
+         
           NavBluePrint(
             label: 'Whitelisted',
             onTap: () {
-              whentapped(3);
+              whentapped(2);
             },
-            isSelected: selectedIndex == 3,
+            isSelected: selectedIndex == 2,
             selectedIcon: IconsaxPlusBold.archive_minus,
             unselectedIcon: IconsaxPlusLinear.archive_minus,
           ),
@@ -64,9 +55,9 @@ class BottomnavigationWidget extends StatelessWidget {
           NavBluePrint(
             label: 'Me',
             onTap: () {
-              whentapped(4);
+              whentapped(3);
             },
-            isSelected: selectedIndex == 4,
+            isSelected: selectedIndex == 3,
             selectedIcon: IconsaxPlusBold.profile_2user,
             unselectedIcon: IconsaxPlusLinear.profile_2user,
           ),

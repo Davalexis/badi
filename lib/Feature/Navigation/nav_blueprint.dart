@@ -20,7 +20,7 @@ class NavBluePrint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color color = isSelected ? kPrimary : Colors.black87;
+    final Color color = isSelected ? kPrimary : Colors.black54;
     final IconData icon = isSelected ? selectedIcon : unselectedIcon;
     return InkWell(
       onTap: onTap,
@@ -29,7 +29,7 @@ class NavBluePrint extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: color, size:  30),
+            Icon(icon, color: color, size: 30),
             const SizedBox(height: 4),
 
             Text(

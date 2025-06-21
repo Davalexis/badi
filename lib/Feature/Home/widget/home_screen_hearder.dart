@@ -1,11 +1,34 @@
 import 'package:badi/Feature/Filter/screen/Filter_bottom_modal.dart';
 import 'package:badi/Feature/Posts/screen/creating_post.dart';
+import 'package:badi/shared/model/property_listing_model.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
-class HomeScreenHeader extends StatelessWidget {
+class HomeScreenHeader extends StatefulWidget {
   const HomeScreenHeader({super.key});
 
+  @override
+  State<HomeScreenHeader> createState() => _HomeScreenHeaderState();
+}
+
+class _HomeScreenHeaderState extends State<HomeScreenHeader> {
+
+  final List<PropertyListingModel> _propertyList = [];
+
+    void _createNewPost() async {
+    final newListing = await Navigator.push<PropertyListingModel>(
+      context,
+      MaterialPageRoute(builder: (context) => const CreatingPostScreen()),
+    );
+
+    if (newListing != null) {
+      setState(() {
+        _propertyList.insert(0, newListing);
+      });
+    }
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -68,10 +91,8 @@ class HomeScreenHeader extends StatelessWidget {
             child: IconButton(
               icon: Icon(IconsaxPlusLinear.add),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CreatingPostScreen()),
-                );
+                // WHEN TAP IT CALL THE CREATING POST SCREEN
+                _createNewPost();
               },
             ),
           ),

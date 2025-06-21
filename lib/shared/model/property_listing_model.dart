@@ -1,24 +1,17 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class PropertyListingModel {
-  final String id;
-  final String image_url;
+  final String title;
   final String price;
-  final String state;
+  final String description;
   final String address;
-  final String bedroom;
-  final double rating;
-  final int reviewcount;
-  late final bool isWhitelisted;
+  final String bedroom; // Kept for consistency with your details screen
+  final List<String> imagePaths; // Changed to a list of file paths
 
   PropertyListingModel({
-    required this.id,
-    required this.image_url,
+    required this.title,
     required this.price,
-    required this.state,
+    required this.description,
     required this.address,
     required this.bedroom,
-    required this.rating,
-    required this.reviewcount,
-    this.isWhitelisted = false,
+    required this.imagePaths,
   });
 }
